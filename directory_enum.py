@@ -6,7 +6,7 @@ print("Custom Tooling: Python Directory Enumerator")
 
 
 
-if len(sys.argv) != 3:
+if len(sys.argv) == 3:
     ip = sys.argv[1]
     wordlist_file = open(f"{sys.argv[2]}", "r")
     wordlist = wordlist_file.read().splitlines()
