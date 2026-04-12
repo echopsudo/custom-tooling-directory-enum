@@ -2,11 +2,22 @@ import sys
 import requests
 import re
 
+
 print("Custom Tooling: Python Directory \n")
+
 
 def help():
     print("Help for this script")
     print("Usage: python3 enum.py 127.0.0.1 wordlist_file.txt")
+
+
+def no_arguments():
+    print("It looks like you didn't provide any arguments")
+    ip = input("Please enter the IP you want to enumerate: ")
+    wordlist_path = input("Please enter the wordlist file: ")
+    wordlist_file = open(f"{wordlist_path}", "r")
+    wordlist = wordlist_file.read().splitlines()
+
 
 def dir():
     try:
@@ -20,11 +31,7 @@ def dir():
                 wordlist_file = open(f"{sys.argv[1]}", "r")
             wordlist = wordlist_file.read().splitlines()
         else:
-            print("It looks like you didn't provide any arguments")
-            ip = input("Please enter the IP you want to enumerate: ")
-            wordlist_path = input("Please enter the wordlist file: ")
-            wordlist_file = open(f"{wordlist_path}", "r")
-            wordlist = wordlist_file.read().splitlines()
+            no_arguments()
     except:
         print("Wordlist not found!")
         sys.exit()
