@@ -11,7 +11,7 @@ fav_color = input("What's your favourite color?: ")
 choices = [real_name, fav_number, location, birthyear, fav_color]
 length = random.randrange(2, 6)
 
-def generate_username():
+def generate_password():
     result = ""
     for times in range(length):
         random_choice = choices.pop(random.randrange(len(choices)))
@@ -19,4 +19,4 @@ def generate_username():
 
     print(result)
 
-generate_username()
+generate_password()
