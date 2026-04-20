@@ -8,6 +8,6 @@ Currently includes:
 - directory enumerator
 - sub + dir enumerator
 - ceasar cipher shifter and brute forcer (wip, currently rewritting)
-- password generator
+- password generator (just a placeholder from username generator for now)
 - username generator
 - password strength checker
